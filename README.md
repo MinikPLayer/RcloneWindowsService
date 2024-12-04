@@ -18,5 +18,8 @@ You need the [rclone](https://rclone.org/downloads/) command visible from the **
 - You can add custom *rclone mount* [parameters](https://rclone.org/commands/rclone_mount/) to the parameters section (**remote:/directory L:** in Usage) of the install script invocation.
 - Run `get-help ./install.ps1` to get more info about the install script and it's features.
 
+## Debugging
+- Errors will be logged to the Event Viewer under `Windows Logs/Application` directory.
+
 ## Planned
 - GUI installer.
