@@ -59,6 +59,7 @@ if ($Uninstall) {
 		Read-Host -Prompt "Press any key to continue or CTRL+C to quit" | Out-Null
 	}
 
+	sc.exe stop $serviceName
 	sc.exe delete $serviceName
 
 	if (!$unattended) {
@@ -78,6 +79,7 @@ if (!$Unattended) {
 }
 
 sc.exe create $serviceName binpath= "$location $formattedParams" start= $StartMode DisplayName= $displayName
+sc.exe start $serviceName
 
 if (!$unattended) {
 	PAUSE
