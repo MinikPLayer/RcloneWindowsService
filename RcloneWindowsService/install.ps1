@@ -64,7 +64,7 @@ if ($Uninstall) {
 	if (!$unattended) {
 		PAUSE
 	}
-	exit
+	exit  
 }
 
 echo "Installing service..."
